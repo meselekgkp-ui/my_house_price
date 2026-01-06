@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wohnungssuche</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            /* Wichtig damit Padding nicht die Breite sprengt */
+        }
+
+        .help-text {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .error-text {
+            color: #b00020;
+        }
+
+        /* DESIGN WUNSCH: Wohnungstyp ein bisschen schraeg */
+        .schraeg-input {
+            transform: skewX(-10deg);
+            /* Neigt das Element */
+            border: 1px solid #007BFF;
+            /* Blaue Umrandung zur Hervorhebung */
+        }
+
+        /* DESIGN WUNSCH: Button mit hellem Text */
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            /* Dunkler Hintergrund */
+            color: #ffffff;
+            /* Heller Text (Weiss) */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Immobiliensuche</h2>
+
+        <form id="searchForm">
+            <label for="bundesland">Bundesland:</label>
+            <select id="bundesland" disabled>
+                <option value="">-- Bitte waehlen --</option>
+            </select>
+
+            <label for="stadt">Stadt:</label>
+            <select id="stadt" disabled>
+                <option value="">-- Zuerst Bundesland waehlen --</option>
+            </select>
+
+            <label for="plz">Postleitzahl (PLZ):</label>
+            <input type="text" id="plz" placeholder="z.B. 80331" maxlength="5" inputmode="numeric" pattern="\d{5}"
+                disabled list="plzList">
+            <datalist id="plzList"></datalist>
+            <small id="plzHelp" class="help-text"></small>
+
+            <label for="typ">Wohnungstyp:</label>
+            <select id="typ" class="schraeg-input">
+                <option value="wohnung">Etagenwohnung</option>
+                <option value="dachgeschoss">Dachgeschoss</option>
+                <option value="maisonette">Maisonette</option>
+                <option value="loft">Loft</option>
+            </select>
+
+            <div class="row">
+                <div style="flex: 1;">
+                    <label for="zimmerMin">Zimmer (Min):</label>
+                    <input type="number" id="zimmerMin" min="1" max="10" step="0.5" placeholder="1">
+                </div>
+                <div style="flex: 1;">
+                    <label for="zimmerMax">Zimmer (Max):</label>
+                    <input type="number" id="zimmerMax" min="1" max="10" step="0.5" placeholder="4">
+                </div>
+            </div>
+
+            <div class="row">
+                <div style="flex: 1;">
+                    <label for="etageMin">Etage (Min):</label>
+                    <input type="number" id="etageMin" min="-1" max="20" placeholder="EG = 0">
+                </div>
+                <div style="flex: 1;">
+                    <label for="etageMax">Etage (Max):</label>
+                    <input type="number" id="etageMax" min="-1" max="20" placeholder="z.B. 5">
+                </div>
+            </div>
+
+            <div class="row">
+                <div style="flex: 1;">
+                    <label for="flaecheMin">Wohnflaeche (m2) ab:</label>
+                    <input type="number" id="flaecheMin" min="10" max="500" placeholder="z.B. 60">
+                </div>
+                <div style="flex: 1;">
+                    <label for="flaecheMax">Wohnflaeche (m2) bis:</label>
+                    <input type="number" id="flaecheMax" min="10" max="500" placeholder="z.B. 120">
+                </div>
+            </div>
+
+            <button type="submit">Suchen</button>
+        </form>
+    </div>
+
+    <script>
+        const bundeslandSelect = document.getElementById("bundesland");
+        const stadtSelect = document.getElementById("stadt");
+        const plzInput = document.getElementById("plz");
+        const plzList = document.getElementById("plzList");
+        const plzHelp = document.getElementById("plzHelp");
+
+        let geoData = {};
+        const plzIndex = new Map();
+
+        function getLabel(value) {
+            return String(value).replace(/_/g, " ");
+        }
+
+        function clearSelect(select, placeholder) {
+            select.innerHTML = "";
+            const option = document.createElement("option");
+            option.value = "";
+            option.textContent = placeholder;
+            select.appendChild(option);
+        }
+
+        function buildPlzIndex(data) {
+            Object.keys(data).forEach(stateKey => {
+                const cities = data[stateKey];
+                Object.keys(cities).forEach(cityKey => {
+                    cities[cityKey].forEach(plz => {
+                        if (!plzIndex.has(plz)) {
+                            plzIndex.set(plz, { stateKey, cityKey });
+                        }
+                    });
+                });
+            });
+        }
+
+        function populateStates() {
+            clearSelect(bundeslandSelect, "-- Bitte waehlen --");
+            const stateKeys = Object.keys(geoData).sort();
+            stateKeys.forEach(stateKey => {
+                const option = document.createElement("option");
+                option.value = stateKey;
+                option.textContent = getLabel(stateKey);
+                bundeslandSelect.appendChild(option);
+            });
+            bundeslandSelect.disabled = false;
+        }
+
+        function populateCities(stateKey) {
+            clearSelect(stadtSelect, "-- Bitte waehlen --");
+            if (!stateKey || !geoData[stateKey]) {
+                stadtSelect.disabled = true;
+                plzInput.disabled = true;
+                return;
+            }
+            const cityKeys = Object.keys(geoData[stateKey]).sort();
+            cityKeys.forEach(cityKey => {
+                const option = document.createElement("option");
+                option.value = cityKey;
+                option.textContent = getLabel(cityKey);
+                stadtSelect.appendChild(option);
+            });
+            stadtSelect.disabled = false;
+        }
+
+        function populatePlzList(stateKey, cityKey) {
+            plzList.innerHTML = "";
+            if (!stateKey || !cityKey || !geoData[stateKey] || !geoData[stateKey][cityKey]) {
+                plzInput.value = "";
+                plzInput.disabled = true;
+                return;
+            }
+            const plzs = geoData[stateKey][cityKey].slice().sort();
+            plzs.forEach(plz => {
+                const option = document.createElement("option");
+                option.value = plz;
+                plzList.appendChild(option);
+            });
+            plzInput.disabled = false;
+        }
+
+        function setPlzHelp(message, isError) {
+            plzHelp.textContent = message;
+            plzHelp.classList.toggle("error-text", Boolean(isError));
+        }
+
+        function isPlzValidForSelection(stateKey, cityKey, plz) {
+            if (!stateKey || !cityKey || !plz || !geoData[stateKey] || !geoData[stateKey][cityKey]) {
+                return false;
+            }
+            return geoData[stateKey][cityKey].includes(plz);
+        }
+
+        function onStateChange() {
+            const stateKey = bundeslandSelect.value;
+            populateCities(stateKey);
+            populatePlzList(stateKey, "");
+            plzInput.value = "";
+            setPlzHelp("");
+        }
+
+        function onCityChange() {
+            const stateKey = bundeslandSelect.value;
+            const cityKey = stadtSelect.value;
+            populatePlzList(stateKey, cityKey);
+            if (plzInput.value && !isPlzValidForSelection(stateKey, cityKey, plzInput.value)) {
+                plzInput.value = "";
+            }
+            setPlzHelp("");
+        }
+
+        function onPlzInput() {
+            const plzValue = plzInput.value.trim();
+            if (plzValue.length !== 5) {
+                setPlzHelp("");
+                return;
+            }
+            const match = plzIndex.get(plzValue);
+            if (!match) {
+                setPlzHelp("PLZ nicht gefunden.", true);
+                return;
+            }
+            if (bundeslandSelect.value !== match.stateKey) {
+                bundeslandSelect.value = match.stateKey;
+                populateCities(match.stateKey);
+            }
+            if (stadtSelect.value !== match.cityKey) {
+                stadtSelect.value = match.cityKey;
+            }
+            populatePlzList(match.stateKey, match.cityKey);
+            setPlzHelp("PLZ passt zu Auswahl.", false);
+        }
+
+        function enforceMinMax(minInput, maxInput) {
+            const minVal = parseFloat(minInput.value);
+            const maxVal = parseFloat(maxInput.value);
+            if (!Number.isNaN(minVal) && !Number.isNaN(maxVal)) {
+                if (minVal > maxVal) {
+                    maxInput.value = minVal;
+                }
+                if (maxVal < minVal) {
+                    minInput.value = maxVal;
+                }
+            }
+        }
+
+        function wireMinMax(minId, maxId) {
+            const minInput = document.getElementById(minId);
+            const maxInput = document.getElementById(maxId);
+            minInput.addEventListener("input", () => enforceMinMax(minInput, maxInput));
+            maxInput.addEventListener("input", () => enforceMinMax(minInput, maxInput));
+        }
+
+        fetch("geo_data.json")
+            .then(response => response.json())
+            .then(data => {
+                geoData = data || {};
+                buildPlzIndex(geoData);
+                populateStates();
+            })
+            .catch(() => {
+                setPlzHelp("Geo-Daten konnten nicht geladen werden.", true);
+            });
+
+        bundeslandSelect.addEventListener("change", onStateChange);
+        stadtSelect.addEventListener("change", onCityChange);
+        plzInput.addEventListener("input", onPlzInput);
+
+        wireMinMax("zimmerMin", "zimmerMax");
+        wireMinMax("etageMin", "etageMax");
+        wireMinMax("flaecheMin", "flaecheMax");
+    </script>
+
+</body>
+
+</html>

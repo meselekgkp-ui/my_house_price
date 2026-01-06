@@ -1,0 +1,1637 @@
+
+[     UTC     ] Logs for ayman-house-pricing.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[21:59:20] 🚀 Starting up repository: 'my-house-price', branch: 'main', main module: 'app.py'
+[21:59:20] 🐙 Cloning repository...
+[21:59:20] 🐙 Cloning into '/mount/src/my-house-price'...
+
+[21:59:20] 🐙 Cloned repository!
+[21:59:20] 🐙 Pulling code changes from Github...
+[21:59:21] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 50 packages in 557ms
+  × Failed to download and build `pandas==2.1.4`
+  ╰─▶ Build backend failed to build wheel through `build_wheel` (exit status:
+      1)
+
+      [stdout]
+      + meson setup
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-kxgq8er8/build
+      -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --vsenv
+      --native-file=/home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-kxgq8er8/build/meson-python-native-file.ini
+      The Meson build system
+      Version: 1.2.1
+      Source dir:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src
+      Build dir:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-kxgq8er8/build
+      Build type: native build
+      Project name: pandas
+      Project version: 2.1.4
+      C compiler for the host machine: cc (gcc 12.2.0 "cc (Debian
+      12.2.0-14+deb12u1) 12.2.0")
+      C linker for the host machine: cc ld.bfd 2.40
+      C++ compiler for the host machine: c++ (gcc 12.2.0 "c++ (Debian
+      12.2.0-14+deb12u1) 12.2.0")
+      C++ linker for the host machine: c++ ld.bfd 2.40
+      Cython compiler for the host machine: cython (cython 0.29.37)
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Program python found: YES
+      (/home/adminuser/.cache/uv/builds-v0/.tmp4IkTHb/bin/python)
+      Did not find pkg-config by name 'pkg-config'
+      Found Pkg-config: NO
+      Run-time dependency python found: YES 3.13
+      Build targets in project: 53
+
+      pandas 2.1.4
+
+        User defined options
+          Native files:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-kxgq8er8/build/meson-python-native-file.ini
+          buildtype   : release
+          vsenv       : True
+          b_ndebug    : if-release
+          b_vscrt     : md
+
+      Found ninja-1.13.0.git.kitware.jobserver-pipe-1 at
+      /home/adminuser/.cache/uv/builds-v0/.tmp4IkTHb/bin/ninja
+
+      Visual Studio environment is needed to run Ninja. It is recommended to
+      use Meson wrapper:
+      /home/adminuser/.cache/uv/builds-v0/.tmp4IkTHb/bin/meson compile -C .
+      + /home/adminuser/.cache/uv/builds-v0/.tmp4IkTHb/bin/ninja
+      [1/151] Generating pandas/_libs/algos_common_helper_pxi with a custom
+      command
+      [2/151] Generating pandas/_libs/hashtable_func_helper_pxi with a custom
+      command
+      [3/151] Generating pandas/_libs/sparse_op_helper_pxi with a custom
+      command
+      [4/151] Generating pandas/_libs/khash_primitive_helper_pxi with a custom
+      command
+      [5/151] Generating pandas/_libs/algos_take_helper_pxi with a custom
+      command
+      [6/151] Generating pandas/_libs/hashtable_class_helper_pxi with a custom
+      command
+      [7/151] Generating pandas/_libs/index_class_helper_pxi with a custom
+      command
+      [8/151] Generating pandas/_libs/intervaltree_helper_pxi with a custom
+      command
+      [9/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/base.pyx
+      [10/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/ccalendar.pyx
+      [11/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/dtypes.pyx
+      [12/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/arrays.pyx
+      [13/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/np_datetime.pyx
+      [14/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/nattype.pyx
+      [15/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timezones.pyx
+      [16/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/indexing.pyx
+      [17/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/vectorized.pyx
+      [18/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/fields.pyx
+      [19/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/tzconversion.pyx
+      [20/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timestamps.pyx
+      [21/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/conversion.pyx
+      [22/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/strptime.pyx
+      [23/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/parsing.pyx
+      [24/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/offsets.pyx
+      [25/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/hashing.pyx
+      [26/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/missing.pyx
+      [27/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/ops_dispatch.pyx
+      [28/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/period.pyx
+      [29/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/byteswap.pyx
+      [30/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/properties.pyx
+      [31/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timedeltas.pyx
+      [32/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/internals.pyx
+      [33/151] Compiling C object
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      [2026-01-06 22:03:05.139812] FAILED: [code=1]
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      cc -Ipandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p
+      -Ipandas/_libs/tslibs -I../../pandas/_libs/tslibs
+      -I../../../../../../../../builds-v0/.tmp4IkTHb/lib/python3.13/site-packages/numpy/core/include
+      -I../../pandas/_libs/include -I/usr/local/include/python3.13
+      -fvisibility=hidden -fdiagnostics-color=always -DNDEBUG
+      -D_FILE_OFFSET_BITS=64 -w -std=c99 -O3 -DNPY_NO_DEPRECATED_API=0
+      -DNPY_TARGET_VERSION=NPY_1_21_API_VERSION -fPIC -MD -MQ
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      -MF
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o.d
+      -o
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      -c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:
+      In function ‘__Pyx_PyInt_As_long’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5397:27:
+      error: too few arguments to function ‘_PyLong_AsByteArray’
+       5397 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      In file included from /usr/local/include/python3.13/longobject.h:107,
+                       from /usr/local/include/python3.13/Python.h:82,
+                       from
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:6:
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note:
+      declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:
+      In function ‘__Pyx_PyInt_As_int’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5631:27:
+      error: too few arguments to function ‘_PyLong_AsByteArray’
+       5631 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note:
+      declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      [34/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/testing.pyx
+      [35/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/ops.pyx
+      [36/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/index.pyx
+      [37/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/sas.pyx
+      [38/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/reshape.pyx
+      [39/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/lib.pyx
+      [40/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/window/indexers.pyx
+      [41/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/writers.pyx
+      [42/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/parsers.pyx
+      [43/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslib.pyx
+      [44/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/window/aggregations.pyx
+      [45/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/interval.pyx
+      [46/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/sparse.pyx
+      [47/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/hashtable.pyx
+      [48/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/algos.pyx
+      [49/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/groupby.pyx
+      [50/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/join.pyx
+      ninja: build stopped: subcommand failed.
+
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 4 packages in 51ms
+Prepared 1 package in 40ms
+Installed 4 packages in 20ms
+ + markdown-it-py==[2026-01-06 22:03:05.289979] 4.0.0
+ + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.2.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting streamlit==1.29.0 (from -r /mount/src/my-house-price/requirements.txt (line 1))
+  Downloading streamlit-1.29.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting pandas==2.1.4 (from -r /mount/src/my-house-price/requirements.txt (line 2))
+  Downloading pandas-2.1.4.tar.gz (4.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 67.1 MB/s eta 0:00:00[2026-01-06 22:03:06.793950] 
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [105 lines of output]
+      + meson setup /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6 /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/.mesonpy-aqst7y6i/build -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --vsenv --native-file=/tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/.mesonpy-aqst7y6i/build/meson-python-native-file.ini
+      The Meson build system
+      Version: 1.2.1
+      Source dir: /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6
+      Build dir: /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/.mesonpy-aqst7y6i/build
+      Build type: native build
+      Project name: pandas
+      Project version: 2.1.4
+      C compiler for the host machine: cc (gcc 12.2.0 "cc (Debian 12.2.0-14+deb12u1) 12.2.0")
+      C linker for the host machine: cc ld.bfd 2.40
+      C++ compiler for the host machine: c++ (gcc 12.2.0 "c++ (Debian 12.2.0-14+deb12u1) 12.2.0")
+      C++ linker for the host machine: c++ ld.bfd 2.40
+      Cython compiler for the host machine: cython (cython 0.29.37)
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Program python found: YES (/home/adminuser/venv/bin/python)
+      Did not find pkg-config by name 'pkg-config'
+      Found Pkg-config: NO
+      Run-time dependency python found: YES 3.13
+      Build targets in project: 53
+      
+      pandas 2.1.4
+      
+        User defined options
+          Native files: /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/.mesonpy-aqst7y6i/build/meson-python-native-file.ini
+          buildtype   : release
+          vsenv       : True
+          b_ndebug    : if-release
+          b_vscrt     : md
+      
+      Found ninja-1.13.0.git.kitware.jobserver-pipe-1 at /tmp/pip-build-env-_jun9jpv/normal/bin/ninja
+      
+      Visual Studio environment is needed to run Ninja. It is recommended to use Meson wrapper:
+      /tmp/pip-build-env-_jun9jpv/overlay/bin/meson compile -C .
+      + /tmp/pip-build-env-_jun9jpv/normal/bin/ninja
+      [1/151] Generating pandas/_libs/algos_common_helper_pxi with a custom command
+      [2/151] Generating pandas/_libs/khash_primitive_helper_pxi with a custom command
+      [3/151] Generating pandas/_libs/hashtable_class_helper_pxi with a custom command
+      [4/151] Generating pandas/_libs/hashtable_func_helper_pxi with a custom command
+      [5/151] Generating pandas/_libs/index_class_helper_pxi with a custom command
+      [6/151] Generating pandas/_libs/sparse_op_helper_pxi with a custom command
+      [7/151] Generating pandas/_libs/algos_take_helper_pxi with a custom command
+      [8/151] Generating pandas/_libs/intervaltree_helper_pxi with a custom command
+      [9/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/base.pyx
+      [10/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/ccalendar.pyx
+      [11/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/nattype.pyx
+      [12/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/dtypes.pyx
+      [13/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/arrays.pyx
+      [14/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/np_datetime.pyx
+      [15/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/indexing.pyx
+      [16/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/vectorized.pyx
+      [17/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/conversion.pyx
+      [18/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/strptime.pyx
+      [19/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/parsing.pyx
+      [20/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/tzconversion.pyx
+      [21/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/fields.pyx
+      [22/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/timezones.pyx
+      [23/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/offsets.pyx
+      [24/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/timedeltas.pyx
+      [25/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/period.pyx
+      [26/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/ops_dispatch.pyx
+      [27/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/hashing.pyx
+      [28/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/byteswap.pyx
+      [29/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/missing.pyx
+      [30/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/properties.pyx
+      [31/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslibs/timestamps.pyx
+      [32/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/internals.pyx
+      [33/151] Compiling C object pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      FAILED: [code=1] pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      cc -Ipandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p -Ipandas/_libs/tslibs -I../../pandas/_libs/tslibs -I../../../../pip-build-env-_jun9jpv/overlay/lib/python3.13/site-packages/numpy/core/include -I../../pandas/_libs/include -I/usr/local/include/python3.13 -fvisibility=hidden -fdiagnostics-color=always -DNDEBUG -D_FILE_OFFSET_BITS=64 -w -std=c99 -O3 -DNPY_NO_DEPRECATED_API=0 -DNPY_TARGET_VERSION=NPY_1_21_API_VERSION -fPIC -MD -MQ pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o -MF pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o.d -o pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o -c pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c: In function ‘__Pyx_PyInt_As_long’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5397:27: error: too few arguments to function ‘_PyLong_AsByteArray’
+       5397 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      In file included from /usr/local/include/python3.13/longobject.h:107,
+                       from /usr/local/include/python3.13/Python.h:82,
+                       from pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:6:
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note: declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c: In function ‘__Pyx_PyInt_As_int’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5631:27: error: too few arguments to function ‘_PyLong_AsByteArray’
+       5631 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note: declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      [34/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/testing.pyx
+      [35/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/index.pyx
+      [36/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/sas.pyx
+      [37/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/ops.pyx
+      [38/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/reshape.pyx
+      [39/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/parsers.pyx
+      [40/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/window/indexers.pyx
+      [41/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/tslib.pyx
+      [42/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/writers.pyx
+      [43/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/lib.pyx
+      [44/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/interval.pyx
+      [45/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/window/aggregations.pyx
+      [46/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/sparse.pyx
+      [47/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/hashtable.pyx
+      [48/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/groupby.pyx
+      [49/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/algos.pyx
+      [50/151] Compiling Cython source /tmp/pip-install-iixm0da5/pandas_2438adb82d2248f49f86292bf76a29d6/pandas/_libs/join.pyx
+      ninja: build stopped: subcommand failed.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 15.0 MB/s eta 0:00:00[2026-01-06 22:05:32.455000] 
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 150.4 MB/s eta 0:00:00[2026-01-06 22:05:32.468198] 
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 55.4 MB/s eta 0:00:00[2026-01-06 22:05:32.501901] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.2
+    Uninstalling Pygments-2.19.2:
+      Successfully uninstalled Pygments-2.19.2
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 4.0.0
+    Uninstalling markdown-it-py-4.0.0:
+      Successfully uninstalled markdown-it-py-4.0.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.2.0
+    Uninstalling rich-14.2.0:
+      Successfully uninstalled rich-14.2.0
+Successfully installed markdown-it-py-4.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.2.0
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[22:05:34] ❗️ installer returned a non-zero exit code
+[22:05:34] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[22:05:34] 🐙 Pulling code changes from Github...
+[22:05:35] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 50 packages in 185ms
+  × Failed to download and build `pandas==2.1.4`
+  ╰─▶ Build backend failed to build wheel through `build_wheel` (exit status:
+      1)
+
+      [stdout]
+      + meson setup
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-u968ynln/build
+      -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --vsenv
+      --native-file=/home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-u968ynln/build/meson-python-native-file.ini
+      The Meson build system
+      Version: 1.2.1
+      Source dir:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src
+      Build dir:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-u968ynln/build
+      Build type: native build
+      Project name: pandas
+      Project version: 2.1.4
+      C compiler for the host machine: cc (gcc 12.2.0 "cc (Debian
+      12.2.0-14+deb12u1) 12.2.0")
+      C linker for the host machine: cc ld.bfd 2.40
+      C++ compiler for the host machine: c++ (gcc 12.2.0 "c++ (Debian
+      12.2.0-14+deb12u1) 12.2.0")
+      C++ linker for the host machine: c++ ld.bfd 2.40
+      Cython compiler for the host machine: cython (cython 0.29.37)
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Program python found: YES
+      (/home/adminuser/.cache/uv/builds-v0/.tmpdzbAYI/bin/python)
+      Did not find pkg-config by name 'pkg-config'
+      Found Pkg-config: NO
+      Run-time dependency python found: YES 3.13
+      Build targets in project: 53
+
+      pandas 2.1.4
+
+        User defined options
+          Native files:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-u968ynln/build/meson-python-native-file.ini
+          buildtype   : release
+          vsenv       : True
+          b_ndebug    : if-release
+          b_vscrt     : md
+
+      Found ninja-1.13.0.git.kitware.jobserver-pipe-1 at
+      /home/adminuser/.cache/uv/builds-v0/.tmpdzbAYI/bin/ninja
+
+      Visual Studio environment is needed to run Ninja. It is recommended to
+      use Meson wrapper:
+      /home/adminuser/.cache/uv/builds-v0/.tmpdzbAYI/bin/meson compile -C .
+      + /home/adminuser/.cache/uv/builds-v0/.tmpdzbAYI/bin/ninja
+      [1/151] Generating pandas/_libs/algos_common_helper_pxi with a custom
+      command
+      [2/151] Generating pandas/_libs/index_class_helper_pxi with a custom
+      command
+      [3/151] Generating pandas/_libs/algos_take_helper_pxi with a custom
+      command
+      [4/151] Generating pandas/_libs/hashtable_func_helper_pxi with a custom
+      command
+      [5/151] Generating pandas/_libs/khash_primitive_helper_pxi with a custom
+      command
+      [6/151] Generating pandas/_libs/sparse_op_helper_pxi with a custom
+      command
+      [7/151] Generating pandas/_libs/hashtable_class_helper_pxi with a custom
+      command
+      [8/151] Generating pandas/_libs/intervaltree_helper_pxi with a custom
+      command
+      [9/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/base.pyx
+      [10/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/arrays.pyx
+      [11/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/np_datetime.pyx
+      [12/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/ccalendar.pyx
+      [13/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/dtypes.pyx
+      [14/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/nattype.pyx
+      [15/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/indexing.pyx
+      [16/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timezones.pyx
+      [17/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/tzconversion.pyx
+      [18/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/strptime.pyx
+      [19/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/offsets.pyx
+      [20/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/vectorized.pyx
+      [21/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/parsing.pyx
+      [22/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/hashing.pyx
+      [23/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timedeltas.pyx
+      [24/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/period.pyx
+      [25/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/fields.pyx
+      [26/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/ops_dispatch.pyx
+      [27/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/conversion.pyx
+      [28/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/internals.pyx
+      [29/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/byteswap.pyx
+      [30/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/missing.pyx
+      [31/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timestamps.pyx
+      [32/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/properties.pyx
+      [33/151] Compiling C object
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      FAILED: [code=1]
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      cc -Ipandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p
+      -Ipandas/_libs/tslibs -I../../pandas/_libs/tslibs
+      -I../../../../../../../../builds-v0/.tmpdzbAYI/lib/python3.13/site-packages/numpy/core/include
+      -I../../pandas/_libs/include -I/usr/local/include/python3.13
+      -fvisibility=hidden -fdiagnostics-color=always -DNDEBUG
+      -D_FILE_OFFSET_BITS=64 -w -std=c99 -O3 -DNPY_NO_DEPRECATED_API=0
+      -DNPY_TARGET_VERSION=NPY_1_21_API_VERSION -fPIC -MD -MQ
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      -MF
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o.d
+      -o
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      -c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:
+      In function ‘[2026-01-06 22:06:04.292129] __Pyx_PyInt_As_long’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5397:27:
+      error: too few arguments to function ‘_PyLong_AsByteArray’
+       5397 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      In file included from /usr/local/include/python3.13/longobject.h:107,
+                       from /usr/local/include/python3.13/Python.h:82,
+                       from
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:6:
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note:
+      declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:
+      In function ‘__Pyx_PyInt_As_int’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5631:27:
+      error: too few arguments to function ‘_PyLong_AsByteArray’
+       5631 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note:
+      declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      [34/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/testing.pyx
+      [35/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/ops.pyx
+      [36/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/writers.pyx
+      [37/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/sas.pyx
+      [38/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/reshape.pyx
+      [39/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslib.pyx
+      [40/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/index.pyx
+      [41/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/window/indexers.pyx
+      [42/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/interval.pyx
+      [43/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/parsers.pyx
+      [44/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/lib.pyx
+      [45/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/window/aggregations.pyx
+      [46/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/sparse.pyx
+      [47/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/groupby.pyx
+      [48/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/algos.pyx
+      [49/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/hashtable.pyx
+      [50/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/join.pyx
+      ninja: build stopped: subcommand failed.
+
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Audited 1 package in 1ms
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting streamlit==1.29.0 (from -r /mount/src/my-house-price/requirements.txt (line 1))
+  Downloading streamlit-1.29.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting pandas==2.1.4 (from -r /mount/src/my-house-price/requirements.txt (line 2))
+  Downloading pandas-2.1.4.tar.gz (4.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 66.3 MB/s eta 0:00:00[2026-01-06 22:06:05.674714] 
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [105 lines of output]
+      + meson setup /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24 /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/.mesonpy-x7ql272j/build -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --vsenv --native-file=/tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/.mesonpy-x7ql272j/build/meson-python-native-file.ini
+      The Meson build system
+      Version: 1.2.1
+      Source dir: /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24
+      Build dir: /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/.mesonpy-x7ql272j/build
+      Build type: native build
+      Project name: pandas
+      Project version: 2.1.4
+      C compiler for the host machine: cc (gcc 12.2.0 "cc (Debian 12.2.0-14+deb12u1) 12.2.0")
+      C linker for the host machine: cc ld.bfd 2.40
+      C++ compiler for the host machine: c++ (gcc 12.2.0 "c++ (Debian 12.2.0-14+deb12u1) 12.2.0")
+      C++ linker for the host machine: c++ ld.bfd 2.40
+      Cython compiler for the host machine: cython (cython 0.29.37)
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Program python found: YES (/home/adminuser/venv/bin/python)
+      Did not find pkg-config by name 'pkg-config'
+      Found Pkg-config: NO
+      Run-time dependency python found: YES 3.13
+      Build targets in project: 53
+      
+      pandas 2.1.4
+      
+        User defined options
+          Native files: /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/.mesonpy-x7ql272j/build/meson-python-native-file.ini
+          buildtype   : release
+          vsenv       : True
+          b_ndebug    : if-release
+          b_vscrt     : md
+      
+      Found ninja-1.13.0.git.kitware.jobserver-pipe-1 at /tmp/pip-build-env-c0xll6q_/normal/bin/ninja
+      
+      Visual Studio environment is needed to run Ninja. It is recommended to use Meson wrapper:
+      /tmp/pip-build-env-c0xll6q_/overlay/bin/meson compile -C .
+      + /tmp/pip-build-env-c0xll6q_/normal/bin/ninja
+      [1/151] Generating pandas/_libs/algos_take_helper_pxi with a custom command
+      [2/151] Generating pandas/_libs/algos_common_helper_pxi with a custom command
+      [3/151] Generating pandas/_libs/khash_primitive_helper_pxi with a custom command
+      [4/151] Generating pandas/_libs/index_class_helper_pxi with a custom command
+      [5/151] Generating pandas/_libs/intervaltree_helper_pxi with a custom command
+      [6/151] Generating pandas/_libs/hashtable_class_helper_pxi with a custom command
+      [7/151] Generating pandas/_libs/hashtable_func_helper_pxi with a custom command
+      [8/151] Generating pandas/_libs/sparse_op_helper_pxi with a custom command
+      [9/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/base.pyx
+      [10/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/nattype.pyx
+      [11/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/ccalendar.pyx
+      [12/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/np_datetime.pyx
+      [13/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/dtypes.pyx
+      [14/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/arrays.pyx
+      [15/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/indexing.pyx
+      [16/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/parsing.pyx
+      [17/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/fields.pyx
+      [18/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/timezones.pyx
+      [19/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/conversion.pyx
+      [20/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/tzconversion.pyx
+      [21/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/vectorized.pyx
+      [22/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/offsets.pyx
+      [23/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/strptime.pyx
+      [24/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/period.pyx
+      [25/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/ops_dispatch.pyx
+      [26/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/properties.pyx
+      [27/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/timestamps.pyx
+      [28/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/missing.pyx
+      [29/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/byteswap.pyx
+      [30/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslibs/timedeltas.pyx
+      [31/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/hashing.pyx
+      [32/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/internals.pyx
+      [33/151] Compiling C object pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      FAILED: [code=1] pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      cc -Ipandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p -Ipandas/_libs/tslibs -I../../pandas/_libs/tslibs -I../../../../pip-build-env-c0xll6q_/overlay/lib/python3.13/site-packages/numpy/core/include -I../../pandas/_libs/include -I/usr/local/include/python3.13 -fvisibility=hidden -fdiagnostics-color=always -DNDEBUG -D_FILE_OFFSET_BITS=64 -w -std=c99 -O3 -DNPY_NO_DEPRECATED_API=0 -DNPY_TARGET_VERSION=NPY_1_21_API_VERSION -fPIC -MD -MQ pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o -MF pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o.d -o pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o -c pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c: In function ‘__Pyx_PyInt_As_long’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5397:27: error: too few arguments to function ‘_PyLong_AsByteArray’
+       5397 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      In file included from /usr/local/include/python3.13/longobject.h:107,
+                       from /usr/local/include/python3.13/Python.h:82,
+                       from pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:6:
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note: declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c: In function ‘__Pyx_PyInt_As_int’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5631:27: error: too few arguments to function ‘_PyLong_AsByteArray’
+       5631 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note: declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      [34/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/testing.pyx
+      [35/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/ops.pyx
+      [36/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/sas.pyx
+      [37/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/parsers.pyx
+      [38/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/reshape.pyx
+      [39/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/window/indexers.pyx
+      [40/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/index.pyx
+      [41/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/lib.pyx
+      [42/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/writers.pyx
+      [43/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/tslib.pyx
+      [44/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/window/aggregations.pyx
+      [45/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/interval.pyx
+      [46/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/sparse.pyx
+      [47/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/hashtable.pyx
+      [48/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/groupby.pyx
+      [49/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/algos.pyx
+      [50/151] Compiling Cython source /tmp/pip-install-z47m68j_/pandas_56f050d53091446c9dff92952d3fbd24/pandas/_libs/join.pyx
+      ninja: build stopped: subcommand failed.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 13.8 MB/s eta 0:00:00[2026-01-06 22:08:29.350034] 
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 148.2 MB/s eta 0:00:00[2026-01-06 22:08:29.363599] 
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 83.7 MB/s eta 0:00:00[2026-01-06 22:08:29.390226] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.2
+    Uninstalling Pygments-2.19.2:
+      Successfully uninstalled Pygments-2.19.2
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 4.0.0
+    Uninstalling markdown-it-py-4.0.0:
+      Successfully uninstalled markdown-it-py-4.0.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.2.0
+    Uninstalling rich-14.2.0:
+      Successfully uninstalled rich-14.2.0
+Successfully installed markdown-it-py-4.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.2.0
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[22:08:31] ❗️ installer returned a non-zero exit code
+[22:08:31] 🐙 Pulling code changes from Github...
+[22:08:31] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 50 packages in 138ms
+  × Failed to download and build `pandas==2.1.4`
+  ╰─▶ Build backend failed to build wheel through `build_wheel` (exit status:
+      1)
+
+      [stdout]
+      + meson setup
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-k9yjqbff/build
+      -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --vsenv
+      --native-file=/home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-k9yjqbff/build/meson-python-native-file.ini
+      The Meson build system
+      Version: 1.2.1
+      Source dir:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src
+      Build dir:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-k9yjqbff/build
+      Build type: native build
+      Project name: pandas
+      Project version: 2.1.4
+      C compiler for the host machine: cc (gcc 12.2.0 "cc (Debian
+      12.2.0-14+deb12u1) 12.2.0")
+      C linker for the host machine: cc ld.bfd 2.40
+      C++ compiler for the host machine: c++ (gcc 12.2.0 "c++ (Debian
+      12.2.0-14+deb12u1) 12.2.0")
+      C++ linker for the host machine: c++ ld.bfd 2.40
+      Cython compiler for the host machine: cython (cython 0.29.37)
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Program python found: YES
+      (/home/adminuser/.cache/uv/builds-v0/.tmpFG9uT6/bin/python)
+      Did not find pkg-config by name 'pkg-config'
+      Found Pkg-config: NO
+      Run-time dependency python found: YES 3.13
+      Build targets in project: 53
+
+      pandas 2.1.4
+
+        User defined options
+          Native files:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-k9yjqbff/build/meson-python-native-file.ini
+          buildtype   : release
+          vsenv       : True
+          b_ndebug    : if-release
+          b_vscrt     : md
+
+      Found ninja-1.13.0.git.kitware.jobserver-pipe-1 at
+      /home/adminuser/.cache/uv/builds-v0/.tmpFG9uT6/bin/ninja
+
+      Visual Studio environment is needed to run Ninja. It is recommended to
+      use Meson wrapper:
+      /home/adminuser/.cache/uv/builds-v0/.tmpFG9uT6/bin/meson compile -C .
+      + /home/adminuser/.cache/uv/builds-v0/.tmpFG9uT6/bin/ninja
+      [1/151] Generating pandas/_libs/algos_take_helper_pxi with a custom
+      command
+      [2/151] Generating pandas/_libs/algos_common_helper_pxi with a custom
+      command
+      [3/151] Generating pandas/_libs/khash_primitive_helper_pxi with a custom
+      command
+      [4/151] Generating pandas/_libs/hashtable_class_helper_pxi with a custom
+      command
+      [5/151] Generating pandas/_libs/hashtable_func_helper_pxi with a custom
+      command
+      [6/151] Generating pandas/_libs/index_class_helper_pxi with a custom
+      command
+      [7/151] Generating pandas/_libs/sparse_op_helper_pxi with a custom
+      command
+      [8/151] Generating pandas/_libs/intervaltree_helper_pxi with a custom
+      command
+      [9/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/base.pyx
+      [10/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/ccalendar.pyx
+      [11/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/arrays.pyx
+      [12/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/dtypes.pyx
+      [13/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/nattype.pyx
+      [14/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/np_datetime.pyx
+      [15/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/indexing.pyx
+      [16/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/conversion.pyx
+      [17/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/tzconversion.pyx
+      [18/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/vectorized.pyx
+      [19/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timezones.pyx
+      [20/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/parsing.pyx
+      [21/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/fields.pyx
+      [22/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/offsets.pyx
+      [23/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/strptime.pyx
+      [24/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/ops_dispatch.pyx
+      [25/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timestamps.pyx
+      [26/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/hashing.pyx
+      [27/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/period.pyx
+      [28/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/missing.pyx
+      [29/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/byteswap.pyx
+      [30/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timedeltas.pyx
+      [31/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/properties.pyx
+      [32/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/testing.pyx
+      [33/151] Compiling C object
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      FAILED: [code=1]
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      cc -Ipandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p
+      -Ipandas/_libs/tslibs -I../../pandas/_libs/tslibs
+      -I../../../../../../../../builds-v0/.tmpFG9uT6/lib/python3.13/site-packages/numpy/core/include
+      -I../../pandas/_libs/include -I/usr/local/include/python3.13
+      -fvisibility=hidden -fdiagnostics-color=always -DNDEBUG
+      -D_FILE_OFFSET_BITS=64 -w -std=c99 -O3 -DNPY_NO_DEPRECATED_API=0
+      -DNPY_TARGET_VERSION=NPY_1_21_API_VERSION -fPIC -MD -MQ
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      -MF
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o.d
+      -o
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      -c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:
+      In function ‘__Pyx_PyInt_As_long’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5397:27:
+      error: too few arguments to function ‘_PyLong_AsByteArray’
+       5397 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      In file included from /usr/local/include/python3.13/longobject.h:107,
+                       from /usr/local/include/python3.13/Python.h:82,
+                       from
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:6:
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note:
+      declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:
+      In function ‘__Pyx_PyInt_As_int’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5631:27:
+      error: too few arguments to function ‘_PyLong_AsByteArray’
+       5631 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note:
+      declared here
+        111 | PyAPI_FUNC(int) [2026-01-06 22:09:00.187328] _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      [34/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/internals.pyx
+      [35/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/ops.pyx
+      [36/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/reshape.pyx
+      [37/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/index.pyx
+      [38/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/sas.pyx
+      [39/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/window/indexers.pyx
+      [40/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/writers.pyx
+      [41/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslib.pyx
+      [42/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/parsers.pyx
+      [43/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/lib.pyx
+      [44/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/window/aggregations.pyx
+      [45/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/interval.pyx
+      [46/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/sparse.pyx
+      [47/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/algos.pyx
+      [48/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/hashtable.pyx
+      [49/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/groupby.pyx
+      [50/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/join.pyx
+      ninja: build stopped: subcommand failed.
+
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Audited 1 package in 1ms
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting streamlit==1.29.0 (from -r /mount/src/my-house-price/requirements.txt (line 1))
+  Downloading streamlit-1.29.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting pandas==2.1.4 (from -r /mount/src/my-house-price/requirements.txt (line 2))
+  Downloading pandas-2.1.4.tar.gz (4.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 60.7 MB/s eta 0:00:00[2026-01-06 22:09:01.995495] 
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [105 lines of output]
+      + meson setup /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4 /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/.mesonpy-iokykygs/build -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --vsenv --native-file=/tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/.mesonpy-iokykygs/build/meson-python-native-file.ini
+      The Meson build system
+      Version: 1.2.1
+      Source dir: /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4
+      Build dir: /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/.mesonpy-iokykygs/build
+      Build type: native build
+      Project name: pandas
+      Project version: 2.1.4
+      C compiler for the host machine: cc (gcc 12.2.0 "cc (Debian 12.2.0-14+deb12u1) 12.2.0")
+      C linker for the host machine: cc ld.bfd 2.40
+      C++ compiler for the host machine: c++ (gcc 12.2.0 "c++ (Debian 12.2.0-14+deb12u1) 12.2.0")
+      C++ linker for the host machine: c++ ld.bfd 2.40
+      Cython compiler for the host machine: cython (cython 0.29.37)
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Program python found: YES (/home/adminuser/venv/bin/python)
+      Did not find pkg-config by name 'pkg-config'
+      Found Pkg-config: NO
+      Run-time dependency python found: YES 3.13
+      Build targets in project: 53
+      
+      pandas 2.1.4
+      
+        User defined options
+          Native files: /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/.mesonpy-iokykygs/build/meson-python-native-file.ini
+          buildtype   : release
+          vsenv       : True
+          b_ndebug    : if-release
+          b_vscrt     : md
+      
+      Found ninja-1.13.0.git.kitware.jobserver-pipe-1 at /tmp/pip-build-env-m5k7qef3/normal/bin/ninja
+      
+      Visual Studio environment is needed to run Ninja. It is recommended to use Meson wrapper:
+      /tmp/pip-build-env-m5k7qef3/overlay/bin/meson compile -C .
+      + /tmp/pip-build-env-m5k7qef3/normal/bin/ninja
+      [1/151] Generating pandas/_libs/algos_take_helper_pxi with a custom command
+      [2/151] Generating pandas/_libs/algos_common_helper_pxi with a custom command
+      [3/151] Generating pandas/_libs/khash_primitive_helper_pxi with a custom command
+      [4/151] Generating pandas/_libs/hashtable_func_helper_pxi with a custom command
+      [5/151] Generating pandas/_libs/index_class_helper_pxi with a custom command
+      [6/151] Generating pandas/_libs/intervaltree_helper_pxi with a custom command
+      [7/151] Generating pandas/_libs/hashtable_class_helper_pxi with a custom command
+      [8/151] Generating pandas/_libs/sparse_op_helper_pxi with a custom command
+      [9/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/base.pyx
+      [10/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/ccalendar.pyx
+      [11/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/dtypes.pyx
+      [12/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/arrays.pyx
+      [13/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/nattype.pyx
+      [14/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/np_datetime.pyx
+      [15/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/indexing.pyx
+      [16/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/timezones.pyx
+      [17/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/offsets.pyx
+      [18/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/conversion.pyx
+      [19/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/strptime.pyx
+      [20/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/vectorized.pyx
+      [21/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/parsing.pyx
+      [22/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/fields.pyx
+      [23/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/tzconversion.pyx
+      [24/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/timestamps.pyx
+      [25/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/hashing.pyx
+      [26/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/period.pyx
+      [27/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslibs/timedeltas.pyx
+      [28/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/missing.pyx
+      [29/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/ops_dispatch.pyx
+      [30/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/byteswap.pyx
+      [31/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/properties.pyx
+      [32/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/internals.pyx
+      [33/151] Compiling C object pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      FAILED: [code=1] pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      cc -Ipandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p -Ipandas/_libs/tslibs -I../../pandas/_libs/tslibs -I../../../../pip-build-env-m5k7qef3/overlay/lib/python3.13/site-packages/numpy/core/include -I../../pandas/_libs/include -I/usr/local/include/python3.13 -fvisibility=hidden -fdiagnostics-color=always -DNDEBUG -D_FILE_OFFSET_BITS=64 -w -std=c99 -O3 -DNPY_NO_DEPRECATED_API=0 -DNPY_TARGET_VERSION=NPY_1_21_API_VERSION -fPIC -MD -MQ pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o -MF pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o.d -o pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o -c pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c: In function ‘__Pyx_PyInt_As_long’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5397:27: error: too few arguments to function ‘_PyLong_AsByteArray’
+       5397 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      In file included from /usr/local/include/python3.13/longobject.h:107,
+                       from /usr/local/include/python3.13/Python.h:82,
+                       from pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:6:
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note: declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c: In function ‘__Pyx_PyInt_As_int’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5631:27: error: too few arguments to function ‘_PyLong_AsByteArray’
+       5631 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note: declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      [34/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/testing.pyx
+      [35/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/sas.pyx
+      [36/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/ops.pyx
+      [37/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/index.pyx
+      [38/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/window/indexers.pyx
+      [39/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/tslib.pyx
+      [40/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/reshape.pyx
+      [41/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/parsers.pyx
+      [42/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/lib.pyx
+      [43/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/window/aggregations.pyx
+      [44/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/writers.pyx
+      [45/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/interval.pyx
+      [46/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/sparse.pyx
+      [47/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/hashtable.pyx
+      [48/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/algos.pyx
+      [49/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/groupby.pyx
+      [50/151] Compiling Cython source /tmp/pip-install-e8u3r03_/pandas_48fa368c97e140ff8f43d84f67d5dda4/pandas/_libs/join.pyx
+      ninja: build stopped: subcommand failed.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 15.2 MB/s eta 0:00:00[2026-01-06 22:11:49.868486] 
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 196.9 MB/s eta 0:00:00[2026-01-06 22:11:49.879191] 
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 91.2 MB/s eta 0:00:00[2026-01-06 22:11:49.902939] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.2
+    Uninstalling Pygments-2.19.2:
+      Successfully uninstalled Pygments-2.19.2
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 4.0.0
+    Uninstalling markdown-it-py-4.0.0:
+      Successfully uninstalled markdown-it-py-4.0.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.2.0
+    Uninstalling rich-14.2.0:
+      Successfully uninstalled rich-14.2.0
+Successfully installed markdown-it-py-4.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.2.0
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[22:11:52] ❗️ installer returned a non-zero exit code
+[22:11:52] 🐙 Pulling code changes from Github...
+[22:11:52] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 50 packages in 136ms
+  × Failed to download and build `pandas==2.1.4`
+  ╰─▶ Build backend failed to build wheel through `build_wheel` (exit status:
+      1)
+
+      [stdout]
+      + meson setup
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-oru31mpb/build
+      -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --vsenv
+      --native-file=/home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-oru31mpb/build/meson-python-native-file.ini
+      The Meson build system
+      Version: 1.2.1
+      Source dir:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src
+      Build dir:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-oru31mpb/build
+      Build type: native build
+      Project name: pandas
+      Project version: 2.1.4
+      C compiler for the host machine: cc (gcc 12.2.0 "cc (Debian
+      12.2.0-14+deb12u1) 12.2.0")
+      C linker for the host machine: cc ld.bfd 2.40
+      C++ compiler for the host machine: c++ (gcc 12.2.0 "c++ (Debian
+      12.2.0-14+deb12u1) 12.2.0")
+      C++ linker for the host machine: c++ ld.bfd 2.40
+      Cython compiler for the host machine: cython (cython 0.29.37)
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Program python found: YES
+      (/home/adminuser/.cache/uv/builds-v0/.tmphInuZv/bin/python)
+      Did not find pkg-config by name 'pkg-config'
+      Found Pkg-config: NO
+      Run-time dependency python found: YES 3.13
+      Build targets in project: 53
+
+      pandas 2.1.4
+
+        User defined options
+          Native files:
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/.mesonpy-oru31mpb/build/meson-python-native-file.ini
+          buildtype   : release
+          vsenv       : True
+          b_ndebug    : if-release
+          b_vscrt     : md
+
+      Found ninja-1.13.0.git.kitware.jobserver-pipe-1 at
+      /home/adminuser/.cache/uv/builds-v0/.tmphInuZv/bin/ninja
+
+      Visual Studio environment is needed to run Ninja. It is recommended to
+      use Meson wrapper:
+      /home/adminuser/.cache/uv/builds-v0/.tmphInuZv/bin/meson compile -C .
+      + /home/adminuser/.cache/uv/builds-v0/.tmphInuZv/bin/ninja
+      [1/151] Generating pandas/_libs/algos_take_helper_pxi with a custom
+      command
+      [2/151] Generating pandas/_libs/algos_common_helper_pxi with a custom
+      command
+      [3/151] Generating pandas/_libs/khash_primitive_helper_pxi with a custom
+      command
+      [4/151] Generating pandas/_libs/hashtable_class_helper_pxi with a custom
+      command
+      [5/151] Generating pandas/_libs/hashtable_func_helper_pxi with a custom
+      command
+      [6/151] Generating pandas/_libs/index_class_helper_pxi with a custom
+      command
+      [7/151] Generating pandas/_libs/intervaltree_helper_pxi with a custom
+      command
+      [8/151] Generating pandas/_libs/sparse_op_helper_pxi with a custom
+      command
+      [9/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/base.pyx
+      [10/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/nattype.pyx
+      [11/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/ccalendar.pyx
+      [12/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/dtypes.pyx
+      [13/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/np_datetime.pyx
+      [14/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/indexing.pyx
+      [15/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/arrays.pyx
+      [16/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/conversion.pyx
+      [17/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timedeltas.pyx
+      [18/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/tzconversion.pyx
+      [19/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/vectorized.pyx
+      [20/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/strptime.pyx
+      [21/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/fields.pyx
+      [22/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timezones.pyx
+      [23/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/hashing.pyx
+      [24/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/offsets.pyx
+      [25/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/ops_dispatch.pyx
+      [26/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/missing.pyx
+      [27/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/properties.pyx
+      [28/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/parsing.pyx
+      [29/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/byteswap.pyx
+      [30/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/period.pyx
+      [31/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslibs/timestamps.pyx
+      [32/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/internals.pyx
+      [33/151] Compiling C object
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      FAILED: [code=1]
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      cc -Ipandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p
+      -Ipandas/_libs/tslibs -I../../pandas/_libs/tslibs
+      -I../../../../../../../../builds-v0/.tmphInuZv/lib/python3.13/site-packages/numpy/core/include
+      -I../../pandas/_libs/include -I/usr/local/include/python3.13
+      -fvisibility=hidden -fdiagnostics-color=always -DNDEBUG
+      -D_FILE_OFFSET_BITS=64 -w -std=c99 -O3 -DNPY_NO_DEPRECATED_API=0
+      -DNPY_TARGET_VERSION=NPY_1_21_API_VERSION -fPIC -MD -MQ
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      -MF
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o.d
+      -o
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/meson-generated_pandas__libs_tslibs_base.pyx.c.o
+      -c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:
+      In function ‘__Pyx_PyInt_As_long’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5397:27:
+      error: too few arguments to function ‘_PyLong_AsByteArray’
+       5397 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      In file included from /usr/local/include/python3.13/longobject.h:107,
+                       from /usr/local/include/python3.13/Python.h:82,
+                       from
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:6:
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note:
+      declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:
+      In function ‘__Pyx_PyInt_As_int’:
+      pandas/_libs/tslibs/base.cpython-313-x86_64-linux-gnu.so.p/pandas/_libs/tslibs/base.pyx.c:5631:27:
+      error: too few arguments to function ‘_PyLong_AsByteArray’
+       5631 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+            |                           ^~~~~~~~~~~~~~~~~~~
+      /usr/local/include/python3.13/cpython/longobject.h:111:17: note:
+      declared here
+        111 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+            |                 ^~~~~~~~~~~~~~~~~~~[2026-01-06 22:12:24.705514] 
+      [34/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/testing.pyx
+      [35/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/reshape.pyx
+      [36/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/sas.pyx
+      [37/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/ops.pyx
+      [38/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/index.pyx
+      [39/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/writers.pyx
+      [40/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/parsers.pyx
+      [41/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/window/indexers.pyx
+      [42/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/window/aggregations.pyx
+      [43/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/tslib.pyx
+      [44/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/lib.pyx
+      [45/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/interval.pyx
+      [46/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/hashtable.pyx
+      [47/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/sparse.pyx
+      [48/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/groupby.pyx
+      [49/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/algos.pyx
+      [50/151] Compiling Cython source
+      /home/adminuser/.cache/uv/sdists-v6/pypi/pandas/2.1.4/f6ODJpaVbv1-0WPbn2Wmz/src/pandas/_libs/join.pyx
+      ninja: build stopped: subcommand failed.
+
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Audited 1 package in 1ms
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting streamlit==1.29.0 (from -r /mount/src/my-house-price/requirements.txt (line 1))
+  Downloading streamlit-1.29.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting pandas==2.1.4 (from -r /mount/src/my-house-price/requirements.txt (line 2))
+  Downloading pandas-2.1.4.tar.gz (4.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 61.7 MB/s eta 0:00:00[2026-01-06 22:12:26.613850] 
+  Installing build dependencies: started
+[22:13:17] 🖥 Provisioning machine...
+[22:13:24] 🎛 Preparing system...
+[22:13:29] ⛓ Spinning up manager process...
+[22:13:21] 🚀 Starting up repository: 'my-house-price', branch: 'main', main module: 'app.py'
+[22:13:21] 🐙 Cloning repository...
+[22:13:22] 🐙 Cloning into '/mount/src/my-house-price'...
+
+[22:13:22] 🐙 Cloned repository!
+[22:13:22] 🐙 Pulling code changes from Github...
+[22:13:22] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 42 packages in 476ms
+Prepared [2026-01-06 22:13:25.839261] 42 packages in 2.26s
+Installed 42 packages in 112ms
+ + altair==6.0.0
+ + attrs==25.4.0
+ + blinker==1.9.0
+ + cachetools==6.2.4
+ + certifi==2026.1.4
+ + charset-normalizer==3.4.4
+ + click==8.3.1
+ + gitdb==4.0.12
+ + gitpython==3.1.46
+ + [2026-01-06 22:13:25.952370] idna==3.11
+ + jinja2==3.1.6
+ + joblib==1.5.3
+ [2026-01-06 22:13:25.952677] + jsonschema==4.25.1
+ + jsonschema-specifications==2025.9.1
+ + lightgbm==4.6.0
+ + markupsafe==3.0.3
+ + narwhals==2.15.0
+ + numpy==2.4.0
+ [2026-01-06 22:13:25.952918] + packaging==25.0
+ + pandas==2.3.3
+ + pillow==12.1.0
+ + protobuf==6.33.2
+ + pyarrow==22.0.0
+ + pydeck==[2026-01-06 22:13:25.953198] 0.9.1
+ + python-dateutil==2.9.0.post0
+ + pytz==2025.2
+ + referencing==0.37.0
+ [2026-01-06 22:13:25.954567] + requests==2.32.5
+ + rpds-py==[2026-01-06 22:13:25.954785] 0.30.0
+ + scikit-learn==1.8.0
+ + scipy==1.16.3
+ + six==1.17.0
+ + smmap==5.0.2
+ + streamlit==1.52.2
+ + tenacity==9.1.2
+ + threadpoolctl[2026-01-06 22:13:25.954980] ==3.6.0
+ + toml==0.10.2
+ + tornado==6.5.4
+ + typing-extensions==4.15.0[2026-01-06 22:13:25.955166] 
+ + tzdata==2025.3
+ + urllib3==2.6.2
+ + watchdog==6.0.0
+Checking if Streamlit is installed
+Found Streamlit version 1.52.2 in the environment
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 4 packages in 140ms
+Prepared 4 packages in 119ms
+Installed 4 packages in 12ms
+ + markdown-it-py==4.0.0
+ [2026-01-06 22:13:27.753999] + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.2.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[22:13:28] 🐍 Python dependencies were installed from /mount/src/my-house-price/requirements.txt using uv.
+Check if streamlit is installed
+Streamlit is already installed
+[22:13:30] 📦 Processed dependencies!
+
+
+
+[22:13:42] 🐙 Pulling code changes from Github...
+[22:13:43] 📦 Processing dependencies...
+[22:13:43] 📦 Processed dependencies!
+[22:13:44] 🔄 Updated app!
+[22:13:44] 🐙 Pulling code changes from Github...
+[22:13:44] 📦 Processing dependencies...
+[22:13:44] 📦 Processed dependencies!
+[22:13:46] 🔄 Updated app!
+[22:13:46] 🐙 Pulling code changes from Github...
+[22:13:46] 📦 Processing dependencies...
+[22:13:46] 📦 Processed dependencies!
+[22:13:47] 🔄 Updated app!
+[22:13:47] 🐙 Pulling code changes from Github...
+[22:13:48] 📦 Processing dependencies...
+[22:13:48] 📦 Processed dependencies!
+[22:13:49] 🔄 Updated app!
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator SimpleImputer from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RobustScaler from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator OneHotEncoder from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator ColumnTransformer from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+[22:15:38] 🐙 Pulling code changes from Github...
+[22:15:38] 📦 Processing dependencies...
+[22:15:38] 📦 Processed dependencies!
+[22:15:39] 🔄 Updated app!
+[22:16:00] 🐙 Pulling code changes from Github...
+[22:16:01] 📦 Processing dependencies...
+[22:16:01] 📦 Processed dependencies!
+[22:16:02] 🔄 Updated app!
+[22:16:14] 🔌 Disconnecting...
+[22:16:19] 🖥 Provisioning machine...
+[22:16:17] 🚀 Starting up repository: 'my-house-price', branch: 'main', main module: 'app.py'
+[22:16:17] 🐙 Cloning repository...
+[22:16:17] 🐙 Cloning into '/mount/src/my-house-price'...
+
+[22:16:17] 🐙 Cloned repository!
+[22:16:17] 🐙 Pulling code changes from Github...
+[22:16:18] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 42 packages in 405ms
+[22:16:20] 🎛 Preparing system...
+[22:16:20] ⛓ Spinning up manager process...
+Prepared 42 packages in 2.05s
+Installed 42 packages in 286ms
+ + altair==6.0.0
+ + attrs==25.4.0
+ + blinker==1.9.0
+ + cachetools==6.2.4
+ + certifi==2026.1.4
+ + charset-normalizer==3.4.4
+ + click==8.3.1
+ + gitdb==4.0.12
+ + gitpython==3.1.46
+ + idna==3.11
+ + jinja2==3.1.6
+ + joblib==1.5.3
+ + jsonschema==4.25.1
+ + jsonschema-specifications==2025.9.1
+ + lightgbm==4.6.0
+ + markupsafe==3.0.3
+ + narwhals==2.15.0
+ + numpy==2.4.0[2026-01-06 22:16:21.128636] 
+ + packaging==25.0
+ + pandas==2.3.3
+ + pillow==12.1.0
+ + protobuf==6.33.2
+ + pyarrow==22.0.0
+ + pydeck==0.9.1
+ +[2026-01-06 22:16:21.128824]  python-dateutil==2.9.0.post0
+ + pytz==2025.2
+ + referencing==0.37.0
+ + requests==2.32.5
+ + rpds-py==0.30.0
+ + scikit-learn==1.8.0
+ + scipy==1.16.3
+ + six[2026-01-06 22:16:21.129004] ==1.17.0
+ + smmap==5.0.2
+ + streamlit==1.52.2
+ + tenacity==9.1.2
+ + threadpoolctl==3.6.0
+ + toml==0.10.2
+ + tornado[2026-01-06 22:16:21.129190] ==6.5.4
+ + typing-extensions==4.15.0
+ + tzdata==2025.3
+ + urllib3==2.6.2
+ + watchdog==6.0.0
+Checking if Streamlit is installed
+Found Streamlit version 1.52.2 in the environment
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 4 packages in 125ms
+Prepared 4 packages in 104ms
+Installed 4 packages in 12ms
+ + markdown-it-py==4.0.0
+ + [2026-01-06 22:16:22.627043] mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.2.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[22:16:22] 🐍 Python dependencies were installed from /mount/src/my-house-price/requirements.txt using uv.
+Check if streamlit is installed
+Streamlit is already installed
+[22:16:24] 📦 Processed dependencies!
+
+
+
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator SimpleImputer from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RobustScaler from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator OneHotEncoder from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/home/adminuser/venv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator ColumnTransformer from version 1.6.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
