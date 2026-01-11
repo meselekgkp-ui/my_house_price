@@ -9,13 +9,14 @@ import joblib
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
 import logging
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 MODEL_PATH = BASE_DIR / "mzyana_lightgbm_model.pkl"
 GEO_PATH = BASE_DIR / "geo_data.json"
+TEMPLATE_DIR = BASE_DIR / "template"
 
 app = FastAPI(title="House Price API", version="1.0.0")
 
@@ -165,6 +166,21 @@ class PredictRequest(BaseModel):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+@app.get("/")
+def root():
+    index_path = TEMPLATE_DIR / "index.html"
+    if not index_path.exists():
+        raise HTTPException(status_code=404, detail="index.html not found")
+    return FileResponse(index_path)
+
+
+@app.get("/geo_data.json")
+def geo_data_file():
+    if not GEO_PATH.exists():
+        raise HTTPException(status_code=404, detail="geo_data.json not found")
+    return FileResponse(GEO_PATH)
 
 
 @app.exception_handler(Exception)

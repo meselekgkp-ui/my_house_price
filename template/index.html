@@ -83,6 +83,36 @@
             display: flex;
             gap: 10px;
         }
+
+        .checkbox-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px 12px;
+            margin-top: 10px;
+        }
+
+        .checkbox-row label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+        }
+
+        .result {
+            margin-top: 16px;
+            padding: 10px;
+            border-radius: 6px;
+            background: #eef4ff;
+            color: #0b2b5b;
+            font-weight: bold;
+            display: none;
+        }
+
+        .error {
+            margin-top: 10px;
+            color: #b00020;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 
@@ -110,46 +140,86 @@
 
             <label for="typ">Wohnungstyp:</label>
             <select id="typ" class="schraeg-input">
-                <option value="wohnung">Etagenwohnung</option>
-                <option value="dachgeschoss">Dachgeschoss</option>
-                <option value="maisonette">Maisonette</option>
-                <option value="loft">Loft</option>
+                <option value="Etagenwohnung">Etagenwohnung</option>
+                <option value="Dachgeschoss">Dachgeschoss</option>
+                <option value="Erdgeschoss">Erdgeschoss</option>
+                <option value="Maisonette">Maisonette</option>
+                <option value="Hochparterre">Hochparterre</option>
+                <option value="Penthouse">Penthouse</option>
+                <option value="Souterrain">Souterrain</option>
+                <option value="Andere">Andere</option>
             </select>
 
             <div class="row">
                 <div style="flex: 1;">
-                    <label for="zimmerMin">Zimmer (Min):</label>
-                    <input type="number" id="zimmerMin" min="1" max="10" step="0.5" placeholder="1">
+                    <label for="zimmer">Zimmer:</label>
+                    <input type="number" id="zimmer" min="1" max="10" step="0.5" placeholder="2.5">
                 </div>
                 <div style="flex: 1;">
-                    <label for="zimmerMax">Zimmer (Max):</label>
-                    <input type="number" id="zimmerMax" min="1" max="10" step="0.5" placeholder="4">
+                    <label for="etage">Etage:</label>
+                    <input type="number" id="etage" min="-1" max="20" placeholder="EG = 0">
                 </div>
             </div>
 
             <div class="row">
                 <div style="flex: 1;">
-                    <label for="etageMin">Etage (Min):</label>
-                    <input type="number" id="etageMin" min="-1" max="20" placeholder="EG = 0">
+                    <label for="flaeche">Wohnflaeche (m2):</label>
+                    <input type="number" id="flaeche" min="10" max="500" placeholder="z.B. 60">
                 </div>
                 <div style="flex: 1;">
-                    <label for="etageMax">Etage (Max):</label>
-                    <input type="number" id="etageMax" min="-1" max="20" placeholder="z.B. 5">
+                    <label for="baujahr">Baujahr:</label>
+                    <input type="number" id="baujahr" min="1800" max="2100" placeholder="z.B. 1998">
                 </div>
             </div>
 
-            <div class="row">
-                <div style="flex: 1;">
-                    <label for="flaecheMin">Wohnflaeche (m2) ab:</label>
-                    <input type="number" id="flaecheMin" min="10" max="500" placeholder="z.B. 60">
-                </div>
-                <div style="flex: 1;">
-                    <label for="flaecheMax">Wohnflaeche (m2) bis:</label>
-                    <input type="number" id="flaecheMax" min="10" max="500" placeholder="z.B. 120">
-                </div>
+            <label for="heizung">Heizung:</label>
+            <select id="heizung">
+                <option value="Zentralheizung">Zentralheizung</option>
+                <option value="Fernwaerme">Fernwaerme</option>
+                <option value="Gas-Heizung">Gas-Heizung</option>
+                <option value="Etagenheizung">Etagenheizung</option>
+                <option value="Fussbodenheizung">Fussbodenheizung</option>
+                <option value="Oelheizung">Oelheizung</option>
+                <option value="Waermepumpe">Waermepumpe</option>
+                <option value="Holzpelletheizung">Holzpelletheizung</option>
+                <option value="Andere">Andere</option>
+            </select>
+
+            <label for="zustand">Zustand:</label>
+            <select id="zustand">
+                <option value="Gepflegt">Gepflegt</option>
+                <option value="Erstbezug">Erstbezug</option>
+                <option value="Saniert">Saniert</option>
+                <option value="Vollstaendig renoviert">Vollstaendig renoviert</option>
+                <option value="Neuwertig">Neuwertig</option>
+                <option value="Modernisiert">Modernisiert</option>
+                <option value="Erstbezug nach Sanierung">Erstbezug nach Sanierung</option>
+                <option value="Andere">Andere</option>
+            </select>
+
+            <label for="qualitaet">Innenausstattung:</label>
+            <select id="qualitaet">
+                <option value="Normal">Normal</option>
+                <option value="Gehoben">Gehoben</option>
+                <option value="Luxus">Luxus</option>
+                <option value="Einfach">Einfach</option>
+            </select>
+
+            <label>Ausstattung:</label>
+            <div class="checkbox-row">
+                <label><input type="checkbox" id="balkon"> Balkon</label>
+                <label><input type="checkbox" id="lift"> Lift</label>
+                <label><input type="checkbox" id="kueche"> Kueche</label>
+                <label><input type="checkbox" id="garten"> Garten</label>
+                <label><input type="checkbox" id="keller"> Keller</label>
             </div>
+
+            <label for="datum">Datum (optional):</label>
+            <input type="date" id="datum">
 
             <button type="submit">Suchen</button>
+            <div id="result" class="result"></div>
+            <div id="error" class="error"></div>
         </form>
     </div>
 
@@ -159,6 +229,8 @@
         const plzInput = document.getElementById("plz");
         const plzList = document.getElementById("plzList");
         const plzHelp = document.getElementById("plzHelp");
+        const resultBox = document.getElementById("result");
+        const errorBox = document.getElementById("error");
 
         let geoData = {};
         const plzIndex = new Map();
@@ -285,26 +357,6 @@
             setPlzHelp("PLZ passt zu Auswahl.", false);
         }
 
-        function enforceMinMax(minInput, maxInput) {
-            const minVal = parseFloat(minInput.value);
-            const maxVal = parseFloat(maxInput.value);
-            if (!Number.isNaN(minVal) && !Number.isNaN(maxVal)) {
-                if (minVal > maxVal) {
-                    maxInput.value = minVal;
-                }
-                if (maxVal < minVal) {
-                    minInput.value = maxVal;
-                }
-            }
-        }
-
-        function wireMinMax(minId, maxId) {
-            const minInput = document.getElementById(minId);
-            const maxInput = document.getElementById(maxId);
-            minInput.addEventListener("input", () => enforceMinMax(minInput, maxInput));
-            maxInput.addEventListener("input", () => enforceMinMax(minInput, maxInput));
-        }
-
         fetch("geo_data.json")
             .then(response => response.json())
             .then(data => {
@@ -320,9 +372,74 @@
         stadtSelect.addEventListener("change", onCityChange);
         plzInput.addEventListener("input", onPlzInput);
 
-        wireMinMax("zimmerMin", "zimmerMax");
-        wireMinMax("etageMin", "etageMax");
-        wireMinMax("flaecheMin", "flaecheMax");
+        function setResult(message) {
+            resultBox.textContent = message;
+            resultBox.style.display = "block";
+        }
+
+        function setError(message) {
+            errorBox.textContent = message;
+        }
+
+        function clearMessages() {
+            resultBox.style.display = "none";
+            resultBox.textContent = "";
+            errorBox.textContent = "";
+        }
+
+        document.getElementById("searchForm").addEventListener("submit", (event) => {
+            event.preventDefault();
+            clearMessages();
+
+            const payload = {
+                livingSpace: Number(document.getElementById("flaeche").value),
+                noRooms: Number(document.getElementById("zimmer").value),
+                floor: Number(document.getElementById("etage").value),
+                yearConstructed: Number(document.getElementById("baujahr").value),
+                regio1: bundeslandSelect.value,
+                regio2: stadtSelect.value,
+                geo_plz: plzInput.value.trim(),
+                heatingType: document.getElementById("heizung").value,
+                condition: document.getElementById("zustand").value,
+                interiorQual: document.getElementById("qualitaet").value,
+                typeOfFlat: document.getElementById("typ").value,
+                balcony: document.getElementById("balkon").checked,
+                lift: document.getElementById("lift").checked,
+                hasKitchen: document.getElementById("kueche").checked,
+                garden: document.getElementById("garten").checked,
+                cellar: document.getElementById("keller").checked,
+                date: document.getElementById("datum").value || null,
+            };
+
+            if (!payload.regio1 || !payload.regio2 || !payload.geo_plz) {
+                setError("Bitte Bundesland, Stadt und PLZ auswaehlen.");
+                return;
+            }
+
+            if (Number.isNaN(payload.livingSpace) || Number.isNaN(payload.noRooms) || Number.isNaN(payload.floor) || Number.isNaN(payload.yearConstructed)) {
+                setError("Bitte alle Zahlenfelder ausfuellen.");
+                return;
+            }
+
+            fetch("/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+            })
+                .then(response => response.json().then(data => ({ ok: response.ok, data })))
+                .then(({ ok, data }) => {
+                    if (!ok) {
+                        setError(data.detail || "Vorhersage fehlgeschlagen.");
+                        return;
+                    }
+                    const value = Number(data.prediction);
+                    const formatted = Number.isFinite(value) ? value.toLocaleString("de-DE", { maximumFractionDigits: 0 }) : data.prediction;
+                    setResult(`Geschaetzte Miete: ${formatted}`);
+                })
+                .catch(() => {
+                    setError("Vorhersage fehlgeschlagen.");
+                });
+        });
     </script>
 
 </body>

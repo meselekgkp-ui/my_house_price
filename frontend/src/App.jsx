@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
+import thdLogo from "./assets/th-deggendorf.png";
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 const HEATING_OPTIONS = [
   "Zentralheizung",
@@ -193,13 +194,14 @@ export default function App() {
   }
 
   return (
-    <div className="page">
+    <>
+      <div className="page">
       <header className="hero">
         <div>
           <p className="eyebrow">Immobilienbewertung</p>
-          <h1>Mietpreis-Expertensystem</h1>
+          <h1>Mietspiegel Deutschland</h1>
           <p className="subhead">
-            Zuverlaessige Schaetzung auf Basis von Standort, Objektmerkmalen und Marktstruktur.
+            Schaetzung auf Basis von Standort und Objektmerkmalen.
           </p>
           <div className="hero-tags">
             <span className="tag">Standort-Logik</span>
@@ -213,7 +215,6 @@ export default function App() {
             <span className={`pill ${loadingGeo ? "pill-warn" : "pill-ok"}`}>
               {loadingGeo ? "Lade Daten" : "Bereit"}
             </span>
-            <span className="pill">Datenquelle: geo_data.json</span>
           </div>
           <div className="hero-metrics">
             <div>
@@ -223,6 +224,14 @@ export default function App() {
             <div>
               <p className="metric-label">Modell</p>
               <p className="metric-value">LightGBM</p>
+            </div>
+            <div>
+              <p className="metric-label">Pipeline</p>
+              <p className="metric-value">Encoding + Skalierung</p>
+            </div>
+            <div>
+              <p className="metric-label">Ziel</p>
+              <p className="metric-value">Gesamtmiete</p>
             </div>
           </div>
         </div>
@@ -430,5 +439,13 @@ export default function App() {
         </form>
       </main>
     </div>
+    <footer className="footer">
+      <p className="footer-text">
+        © 2026 Ayman M., Yassin B., Godfred G. Alle Rechte vorbehalten. Betreuer: Prof. Dr. Florian Wahl.
+        Mietspiegel Deutschland. TH Deggendorf, WS 2025/2026.
+      </p>
+      <img className="footer-logo" src={thdLogo} alt="Technische Hochschule Deggendorf" />
+    </footer>
+    </>
   );
 }
