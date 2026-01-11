@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import thdLogo from "./assets/th-deggendorf.png";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+const API_BASE = import.meta.env.VITE_API_URL || "https://my-house-price-40u3.onrender.com";
 
 const HEATING_OPTIONS = [
   "Zentralheizung",
