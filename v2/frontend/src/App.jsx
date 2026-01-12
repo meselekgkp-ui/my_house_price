@@ -40,7 +40,7 @@ const TYPE_OPTIONS = [
 ];
 
 const FEATURE_LABELS = {
-  livingSpace: "Wohnflaeche",
+  livingSpace: "Wohnfläche",
   noRooms: "Zimmer",
   floor: "Etage",
   yearConstructed: "Baujahr",
@@ -49,11 +49,11 @@ const FEATURE_LABELS = {
   geo_plz: "PLZ",
   heatingType: "Heizung",
   condition: "Zustand",
-  interiorQual: "Qualitaet",
+  interiorQual: "Qualität",
   typeOfFlat: "Wohnungstyp",
   balcony: "Balkon",
   lift: "Aufzug",
-  hasKitchen: "Einbaukueche",
+  hasKitchen: "Einbauküche",
   garden: "Garten",
   cellar: "Keller",
   post_year: "Inseratjahr",
@@ -61,7 +61,7 @@ const FEATURE_LABELS = {
   geo_plz_encoded: "PLZ (encodiert)",
   condition_encoded: "Zustand (encodiert)",
   heatingType_encoded: "Heizung (encodiert)",
-  interiorQual_encoded: "Qualitaet (encodiert)",
+  interiorQual_encoded: "Qualität (encodiert)",
 };
 
 function toLabel(value) {
@@ -274,7 +274,7 @@ export default function App() {
           <p className="eyebrow">Immobilienbewertung</p>
           <h1>Mietspiegel Deutschland</h1>
           <p className="subhead">
-            Schaetzung auf Basis von Standort und Objektmerkmalen. Keine Gewaehr, nur Schaetzung.
+            Schätzung auf Basis von Standort und Objektmerkmalen. Keine Gewähr, nur Schätzung.
           </p>
           <div className="hero-tags">
             <span className="tag">Standort-Logik</span>
@@ -363,13 +363,13 @@ export default function App() {
 
           <section className="section">
             <div className="section-header">
-              <h2>2. Gebaeudedaten</h2>
-              <p>Setze realistische Werte fuer eine bessere Prognose.</p>
+              <h2>2. Gebäudedaten</h2>
+              <p>Setze realistische Werte für eine bessere Prognose.</p>
             </div>
 
             <div className="grid-4">
               <label className="field">
-                <span>Wohnflaeche (m2)</span>
+                <span>Wohnfläche (m²)</span>
                 <input
                   type="number"
                   min="10"
@@ -413,8 +413,8 @@ export default function App() {
 
           <section className="section">
             <div className="section-header">
-              <h2>3. Qualitaet & Zustand</h2>
-              <p>Material und Zustand sind entscheidend fuer die Bewertung.</p>
+              <h2>3. Qualität & Zustand</h2>
+              <p>Material und Zustand sind entscheidend für die Bewertung.</p>
             </div>
 
             <div className="grid-4">
@@ -439,7 +439,7 @@ export default function App() {
                 </select>
               </label>
               <label className="field">
-                <span>Qualitaet</span>
+                <span>Qualität</span>
                 <select value={interiorQual} onChange={(e) => setInteriorQual(e.target.value)}>
                   {QUALITY_OPTIONS.map((item) => (
                     <option key={item} value={item}>
@@ -464,7 +464,7 @@ export default function App() {
           <section className="section">
             <div className="section-header">
               <h2>4. Extras</h2>
-              <p>Kleine Features koennen den Mietpreis spuerbar veraendern.</p>
+              <p>Kleine Features können den Mietpreis spürbar verändern.</p>
             </div>
 
             <div className="toggle-grid">
@@ -478,7 +478,7 @@ export default function App() {
               </label>
               <label className="toggle">
                 <input type="checkbox" checked={hasKitchen} onChange={(e) => setHasKitchen(e.target.checked)} />
-                <span>Einbaukueche</span>
+                <span>Einbauküche</span>
               </label>
               <label className="toggle">
                 <input type="checkbox" checked={garden} onChange={(e) => setGarden(e.target.checked)} />
@@ -501,10 +501,10 @@ export default function App() {
           {prediction !== null && (
             <section className="result">
               <div>
-                <p className="result-label">Geschaetzte Gesamtmiete</p>
+                <p className="result-label">Geschätzte Gesamtmiete</p>
                 <h3>{prediction.toFixed(2)} EUR</h3>
                 <p className="result-meta">
-                  {toLabel(cityKey)}, {toLabel(stateKey)} - {livingSpace} m2
+                  {toLabel(cityKey)}, {toLabel(stateKey)} - {livingSpace} m²
                 </p>
               </div>
               {predictionMeta && (
@@ -520,7 +520,7 @@ export default function App() {
                       )}
                     </div>
                     <div>
-                      <p className="detail-label">Preis pro m2</p>
+                      <p className="detail-label">Preis pro m²</p>
                       <p className="detail-value">
                         {formatNumber(predictionMeta.eurPerSqm)} EUR/m2
                       </p>
