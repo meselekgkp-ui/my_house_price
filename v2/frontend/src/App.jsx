@@ -113,12 +113,29 @@ export default function App() {
   const [submitError, setSubmitError] = useState("");
 
   useEffect(() => {
-    fetch(`${API_BASE}/geo`)
-      .then((res) => {
+    let isMounted = true;
+
+    async function loadGeoData() {
+      try {
+        const res = await fetch(`${API_BASE}/geo`);
         if (!res.ok) throw new Error("Geo data fetch failed");
-        return res.json();
-      })
+        const data = await res.json();
+        return data || {};
+      } catch (err) {
+        try {
+          const fallbackRes = await fetch("/geo_data.json");
+          if (!fallbackRes.ok) throw new Error("Fallback geo data fetch failed");
+          const fallbackData = await fallbackRes.json();
+          return fallbackData || {};
+        } catch (fallbackErr) {
+          throw new Error(fallbackErr.message || err.message);
+        }
+      }
+    }
+
+    loadGeoData()
       .then((data) => {
+        if (!isMounted) return;
         setGeoData(data || {});
         const states = Object.keys(data || {}).sort();
         if (states.length > 0) {
@@ -134,9 +151,16 @@ export default function App() {
         }
       })
       .catch((err) => {
+        if (!isMounted) return;
         setGeoError(err.message || "Geo data konnte nicht geladen werden");
       })
-      .finally(() => setLoadingGeo(false));
+      .finally(() => {
+        if (isMounted) setLoadingGeo(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const states = useMemo(() => Object.keys(geoData).sort(), [geoData]);
